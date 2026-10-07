@@ -1,0 +1,16 @@
+erDiagram
+    USER {
+        integer id PK
+        string name
+        string email
+    }
+
+    POST {
+        integer id PK
+        integer user_id FK
+        string title
+        string content
+        datetime created_at
+    }
+
+    USER ||--o{ POST : creates
